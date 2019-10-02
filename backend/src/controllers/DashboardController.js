@@ -8,7 +8,7 @@ module.exports = {
         if (!user) {
             return res.status(400).json({error: 'User does already exists'});
         }
-        const spots = await Spots.find({user: user_id})
+        const spots = await Spots.find({user: user_id});
         return res.json(spots);
     }
 }
